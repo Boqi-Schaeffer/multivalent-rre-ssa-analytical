@@ -1,0 +1,50 @@
+// Whitespace at the end of line (especially change in reactants) causes strange behaviour// Make sure to remove all whitespace!!!
+nanostar 3 arms model, konsol: 1e-08, konsur: 5e-05, koff: 1
+
+> Species, species dimension and diffuion constants
+// On membrane
+receptA         2       0
+receptB         2       0
+n10		 2		 0
+n20		 2		 0
+n30		 2		 0
+
+
+// In solution
+n00		 3	 0
+receptora_tot	 3	 0
+receptorb_tot	 3	 0
+nanostars_tot	 3	 0
+coverage 	 3	 0 
+
+> Reactions and rate
+// binding arm with type A
+binding n00
+n00 -1 receptA -1 n10 1
+3.0000000000000004e-08
+
+// unbinding arm with type A
+unbinding n10
+n10 -1 receptA 1 n00 1
+1
+
+// binding arm with type A
+binding n10
+n10 -1 receptA -1 n20 1
+0.0001
+
+// unbinding arm with type A
+unbinding n20
+n20 -1 receptA 1 n10 1
+2
+
+// binding arm with type A
+binding n20
+n20 -1 receptA -1 n30 1
+5e-05
+
+// unbinding arm with type A
+unbinding n30
+n30 -1 receptA 1 n20 1
+3
+

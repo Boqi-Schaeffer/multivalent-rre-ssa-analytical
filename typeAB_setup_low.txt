@@ -1,0 +1,11 @@
+// Species, species dimension and diffusion constants
+// In solution
+n00      	13000000
+
+// On membrane
+receptA		0
+receptB		0
+
+
+
+
